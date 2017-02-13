@@ -1,0 +1,7 @@
+C-K
+
+<% @postits.each do |postit| %>
+  <div class="postit" data-id=<%= postit.id %> style="top: <%= postit.position_top %>px; left: <%= postit.position_left %>px;">
+    <%= postit.text %>
+  </div>
+<% end %>
