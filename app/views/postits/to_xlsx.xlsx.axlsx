@@ -1,0 +1,7 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "CK") do |sheet|
+  sheet.add_row [@subject]
+  @postits.each do |postit|
+    sheet.add_row [postit.text]
+  end
+end

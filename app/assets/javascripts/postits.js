@@ -17,7 +17,7 @@ $(function() {
     }
   });
 
-  $("#button-drag").on('click', function() {
-
-  });
+  setTimeout(function(){
+     window.location.reload(1);
+  }, 10000);
 });

@@ -5,6 +5,18 @@ class PostitsController < ApplicationController
     @postits = Postit.all
   end
 
+  def to_xlsx
+    @subject = "Le parapluie"
+
+    @postits = Postit.order('position_top ASC')
+    respond_to do |format|
+      format.html
+      format.xlsx {
+        response.headers['Content-Disposition'] = 'attachment; filename="ck.xlsx"'
+      }
+    end
+  end
+
   def new
     @postit = Postit.new
   end

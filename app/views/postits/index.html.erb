@@ -1,4 +1,8 @@
-C-K
+<div class="container-fluid">
+  <%= link_to 'Download as .xlsx', to_xlsx_path(format: :xlsx), class: 'btn-download-excel btn btn-success' %>
+  <div class="text-center">C-K</div>
+  <div class="text-center">Le parapluie</div>
+</div>
 
 <% @postits.each do |postit| %>
   <div class="postit" data-id=<%= postit.id %> style="top: <%= postit.position_top %>px; left: <%= postit.position_left %>px;">
